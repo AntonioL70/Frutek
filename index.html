@@ -35,6 +35,21 @@
         .card-body {
             flex: 1; /* Take remaining space */
         }
+        .jumbotron {
+            width: 100vw; /* Full viewport width */
+            margin-left: calc(50% - 50vw); /* Center align on smaller screens */
+            margin-right: calc(50% - 50vw); /* Center align on smaller screens */
+            background-image: url('img/tvz_homepage_carosel.png');
+            background-size: cover;
+            background-position: center;
+            padding-top: 200px; /* Adjust as needed */
+            padding-bottom: 200px; /* Adjust as needed */
+            text-align: center;
+            color: white;
+        }
+        .jumbotron h1 {
+            font-size: 4rem;
+        }
     </style>
 </head>
 <body>
@@ -69,11 +84,8 @@
 
     <!-- Hero Image with Text -->
     <div class="jumbotron jumbotron-fluid">
-        <div class="container text-center">
-<<<<<<< HEAD
-            <img src="img/tvz_homepage_carosel.png" alt="TVZ Homepage Carousel Image" style="width: 100%;">
-=======
->>>>>>> 9d0b5f09fb9c90a3cff86028822e8bd7f7bc80b6
+        <div class="container">
+            <img src="img/tvz_homepage_carosel.png" alt="TVZ Homepage Carousel Image" class="img-fluid">
             <h1 class="display-4">TVZ</h1>
         </div>
     </div>
