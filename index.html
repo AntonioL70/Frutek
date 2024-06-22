@@ -46,9 +46,17 @@
             padding-bottom: 200px; /* Adjust as needed */
             text-align: center;
             color: white;
+            position: relative; /* Needed for absolute positioning */
         }
         .jumbotron h1 {
-            font-size: 4rem;
+            font-size: 6rem; /* Increased font size */
+            font-weight: bold; /* Bold font weight */
+            position: absolute; /* Position text absolutely */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Center align with respect to its container */
+            margin: 0; /* Remove default margin */
+            z-index: 1; /* Ensure text is on top of image */
         }
     </style>
 </head>
@@ -84,8 +92,7 @@
 
     <!-- Hero Image with Text -->
     <div class="jumbotron jumbotron-fluid">
-        <div class="container" style="max-height: 10vh;">
-            <img src="img/tvz_homepage_carosel.png" alt="TVZ Homepage Carousel Image" class="img-fluid">
+        <div class="container">
             <h1 class="display-4">TVZ</h1>
         </div>
     </div>
