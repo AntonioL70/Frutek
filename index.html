@@ -58,6 +58,19 @@
             margin: 0; /* Remove default margin */
             z-index: 1; /* Ensure text is on top of image */
         }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0b3d91;
+            margin-bottom: 1rem;
+        }
+        .section-title a {
+            color: #0b3d91;
+            text-decoration: none;
+        }
+        .section-title a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -93,6 +106,7 @@
     <!-- Hero Image with Text -->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
+            <img src="img/tvz_homepage_carosel.png" alt="TVZ Homepage Carousel Image" class="img-fluid">
             <h1 class="display-4">TVZ</h1>
         </div>
     </div>
@@ -100,6 +114,13 @@
     <!-- Main Content -->
     <div class="container mt-5">
         <!-- Novosti Section -->
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <a href="novosti.html">Novosti</a>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4">
@@ -131,10 +152,17 @@
         </div>
 
         <!-- Studiji Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="section-title">
+                    <a href="studiji.html">Studiji</a>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <img src="img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
+                    <img src="path/to/preddiplomski-image.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
                     <div class="card-body">
                         <h2 class="card-title">Preddiplomski Studij</h2>
                     </div>
@@ -142,7 +170,7 @@
             </div>
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <img src="img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
+                    <img src="path/to/diplomski-image.jpg" class="card-img-top" alt="Diplomski Studij Image">
                     <div class="card-body">
                         <h2 class="card-title">Diplomski Studij</h2>
                     </div>
