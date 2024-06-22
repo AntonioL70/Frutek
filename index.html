@@ -23,9 +23,17 @@
         .navbar-brand img {
             height: 50px;
         }
-        .hero-image img {
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
             width: 100%;
             height: auto;
+        }
+        .card-body {
+            flex: 1; /* Take remaining space */
         }
     </style>
 </head>
@@ -60,8 +68,11 @@
     </nav>
 
     <!-- Hero Image with Text -->
-    <div class="hero-image">
-        <img src="img/tvz_homepage_carousel.png" alt="TVZ Homepage Carousel Image">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <img src="img/tvz_homepage_carousel.png" alt="TVZ Homepage Carousel Image" style="width: 100%;">
+            <h1 class="display-4">TVZ</h1>
+        </div>
     </div>
 
     <!-- Main Content -->
@@ -70,29 +81,29 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4">
+                    <img src="./img/tvz_novosti.jpg" class="card-img-top" alt="News Image 1">
                     <div class="card-body">
                         <h5 class="card-title">News Title 1</h5>
                         <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
                     </div>
-                    <img src="./img/tvz_novosti.jpg" class="card-img-top" alt="News Image 1">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-4">
+                    <img src="./img/tvz_novosti2.jpg" class="card-img-top" alt="News Image 2">
                     <div class="card-body">
                         <h5 class="card-title">News Title 2</h5>
                         <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
                     </div>
-                    <img src="./img/tvz_novosti2.jpg" class="card-img-top" alt="News Image 2">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-4">
+                    <img src="./img/tvz_novosti3.png" class="card-img-top" alt="News Image 3">
                     <div class="card-body">
                         <h5 class="card-title">News Title 3</h5>
                         <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
                     </div>
-                    <img src="./img/tvz_novosti3.png" class="card-img-top" alt="News Image 3">
                 </div>
             </div>
         </div>
@@ -101,7 +112,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <img src="./img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
+                    <img src="path/to/preddiplomski-image.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
                     <div class="card-body">
                         <h2 class="card-title">Preddiplomski Studij</h2>
                     </div>
@@ -109,7 +120,7 @@
             </div>
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <img src="./img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
+                    <img src="path/to/diplomski-image.jpg" class="card-img-top" alt="Diplomski Studij Image">
                     <div class="card-body">
                         <h2 class="card-title">Diplomski Studij</h2>
                     </div>
