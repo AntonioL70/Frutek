@@ -67,28 +67,26 @@
             height: 200px; /* Fixed height for images */
             object-fit: cover; /* Maintain aspect ratio and cover whole space */
         }
-        .card-body {
+        .card {
             position: relative;
-            padding: 15px; /* Added padding around card body */
+            overflow: hidden;
         }
-        .card-title {
-            font-weight: bold;
-            color: black; /* Changed text color to black */
-            margin-bottom: 10px; /* Added margin to separate from description */
-        }
-        .card-text {
-            margin-bottom: 15px; /* Added margin to separate from category */
-        }
-        .card-category {
+        .card-title-overlay {
             position: absolute;
-            top: 0px;
-            right: 0px;
-            background-color: #0b3d91; /* TVZ Dark Blue */
-            color: white;
-            padding: 5px 10px;
-            font-weight: bold;
-            font-size: 0.8rem;
-            margin: 0; /* Removed padding */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem; /* Increased font size */
+            font-weight: bold; /* Bold font weight */
+            color: white; /* White text color */
+            background-color: rgba(11, 61, 145, 0.7); /* Semi-transparent background */
+            padding: 10px 20px; /* Padding for better readability */
+            border-radius: 5px;
+            z-index: 1; /* Ensure text is on top of image */
+        }
+        .card-description {
+            background-color: rgba(255, 255, 255, 0.9); /* Light background for description */
+            padding: 15px;
         }
     </style>
 </head>
@@ -179,10 +177,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <div class="card-body p-0">
-                        <img src="img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
-                        <div class="card-title-overlay">Preddiplomski Studij</div>
-                    </div>
+                    <img src="img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
+                    <div class="card-title-overlay">Preddiplomski Studij</div>
                     <div class="card-description">
                         <p>Studij je organiziran kroz šest trogodišnjih studijska programa (smjerova), a započinje zajedničkom prvom godinom.</p>
                     </div>
@@ -190,10 +186,8 @@
             </div>
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <div class="card-body p-0">
-                        <img src="img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
-                        <div class="card-title-overlay">Diplomski Studij</div>
-                    </div>
+                    <img src="img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
+                    <div class="card-title-overlay">Diplomski Studij</div>
                     <div class="card-description">
                         <p>Diplomski studij organizira se kroz tri studijska programa, traje dvije godine, a izvode se po sustavu preduvjeta.</p>
                     </div>
