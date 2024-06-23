@@ -155,17 +155,31 @@
         .dropdown-item:hover {
             color: #a3c0f4;
         }
+        .card {
+            height: 100%;
+            border: none;
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            height: 200px; /* Adjust height as needed */
+            object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire space */
+        }
+
+        .card-body {
+            position: relative; /* Ensure category spans are positioned relative to card body */
+        }
+
         .card-category {
-			position: absolute;
-			top: 200px;
-			right: 0px;
-			background-color: #0b3d91;
-			color: white;
-			padding: 5px 10px;
-			font-weight: bold;
-			font-size: 0.8rem;
-			margin: 0;
-		}
+            position: absolute;
+            top: 10px; /* Adjust position as needed */
+            right: 10px; /* Adjust position as needed */
+            background-color: #0b3d91;
+            color: white;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -228,45 +242,45 @@
     </nav>
 
     <!-- Novosti Section -->
-    <div class="container mt-5">
-        <h1 class="text-center mb-5">Novosti</h1>
-        <div class="row mb-4">
-            <!-- Najnovije Novosti -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/tvz_novosti.jpg" class="card-img-top" alt="News 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Mreža TV</h5>
-                        <p class="card-text">2024 05 30 Studentski grad.</p>
-                        <span class="card-category">Događaji</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/tvz_novosti2.jpg" class="card-img-top" alt="News 2">
-                    <div class="card-body">
-                        <h5 class="card-title">MIPRO 2024</h5>
-                        <p class="card-text">U Opatiji je od 20. do 24. svibnja 2024. održan međunarodni skup MIPRO 2024 za
-                            informacijsku, komunikacijsku i elektroničku tehnologiju.</p>
-                        <span class="card-category">Radionice</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/tvz_novosti3.png" class="card-img-top" alt="News 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Vertiv</h5>
-                        <p class="card-text">Studenti Elektrotehničkog odjela Tehničkog veleučilišta u Zagrebu 22.05.2024.
-                            sudjelovali su u posjetu tvornici Vertiv u naselju Rugvica.</p>
-                        <span class="card-category">Radionice</span>
-                    </div>
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Novosti</h1>
+    <div class="row mb-4">
+        <!-- Najnovije Novosti -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/tvz_novosti.jpg" class="card-img-top" alt="News 1">
+                <div class="card-body">
+                    <h5 class="card-title">Mreža TV</h5>
+                    <p class="card-text">2024 05 30 Studentski grad.</p>
+                    <span class="card-category">Događaji</span>
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/tvz_novosti2.jpg" class="card-img-top" alt="News 2">
+                <div class="card-body">
+                    <h5 class="card-title">MIPRO 2024</h5>
+                    <p class="card-text">U Opatiji je od 20. do 24. svibnja 2024. održan međunarodni skup MIPRO 2024 za
+                        informacijsku, komunikacijsku i elektroničku tehnologiju.</p>
+                    <span class="card-category">Radionice</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/tvz_novosti3.png" class="card-img-top" alt="News 3">
+                <div class="card-body">
+                    <h5 class="card-title">Vertiv</h5>
+                    <p class="card-text">Studenti Elektrotehničkog odjela Tehničkog veleučilišta u Zagrebu 22.05.2024.
+                        sudjelovali su u posjetu tvornici Vertiv u naselju Rugvica.</p>
+                    <span class="card-category">Radionice</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Search Bar -->
+    <!-- Search Bar -->
     <div class="row mb-4">
         <div class="col-md-6 offset-md-3">
             <div class="input-group">
@@ -284,66 +298,70 @@
         </div>
     </div>
 
-
-        <!-- Sve Novosti -->
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="img/news4.jpg" class="card-img-top" alt="News 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Novost 4</h5>
-                        <p class="card-text">Kratak opis novosti 4...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="img/news5.jpg" class="card-img-top" alt="News 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Novost 5</h5>
-                        <p class="card-text">Kratak opis novosti 5...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="img/news6.jpg" class="card-img-top" alt="News 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Novost 6</h5>
-                        <p class="card-text">Kratak opis novosti 6...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="img/news7.jpg" class="card-img-top" alt="News 7">
-                    <div class="card-body">
-                        <h5 class="card-title">Novost 7</h5>
-                        <p class="card-text">Kratak opis novosti 7...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="img/news8.jpg" class="card-img-top" alt="News 8">
-                    <div class="card-body">
-                        <h5 class="card-title">Novost 8</h5>
-                        <p class="card-text">Kratak opis novosti 8...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="img/news9.jpg" class="card-img-top" alt="News 9">
-                    <div class="card-body">
-                        <h5 class="card-title">Novost 9</h5>
-                        <p class="card-text">Kratak opis novosti 9...</p>
-                    </div>
+    <!-- Sve Novosti -->
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/news4.jpg" class="card-img-top" alt="News 4">
+                <div class="card-body">
+                    <h5 class="card-title">Novost 4</h5>
+                    <p class="card-text">Kratak opis novosti 4...</p>
+                    <span class="card-category">Kategorija 1</span>
                 </div>
             </div>
         </div>
-
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/news5.jpg" class="card-img-top" alt="News 5">
+                <div class="card-body">
+                    <h5 class="card-title">Novost 5</h5>
+                    <p class="card-text">Kratak opis novosti 5...</p>
+                    <span class="card-category">Kategorija 2</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/news6.jpg" class="card-img-top" alt="News 6">
+                <div class="card-body">
+                    <h5 class="card-title">Novost 6</h5>
+                    <p class="card-text">Kratak opis novosti 6...</p>
+                    <span class="card-category">Kategorija 3</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/news7.jpg" class="card-img-top" alt="News 7">
+                <div class="card-body">
+                    <h5 class="card-title">Novost 7</h5>
+                    <p class="card-text">Kratak opis novosti 7...</p>
+                    <span class="card-category">Kategorija 4</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/news8.jpg" class="card-img-top" alt="News 8">
+                <div class="card-body">
+                    <h5 class="card-title">Novost 8</h5>
+                    <p class="card-text">Kratak opis novosti 8...</p>
+                    <span class="card-category">Kategorija 5</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/news9.jpg" class="card-img-top" alt="News 9">
+                <div class="card-body">
+                    <h5 class="card-title">Novost 9</h5>
+                    <p class="card-text">Kratak opis novosti 9...</p>
+                    <span class="card-category">Kategorija 6</span>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -383,20 +401,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Add smooth scrolling on all links inside the navbar
-        $(".navbar a").on('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-                    window.location.hash = hash;
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
