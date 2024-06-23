@@ -61,10 +61,8 @@
             color: #a3c0f4;
         }
         .section-container {
-            border: 2px solid #0b3d91;
             padding: 20px;
             margin-bottom: 20px;
-            border-radius: 8px;
             background-color: white;
         }
         .card img {
@@ -91,34 +89,6 @@
         }
         .card-description {
             padding: 10px;
-        }
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden; /* Ensure items overflow properly */
-        }
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-            overflow: hidden; /* Hide overflow */
-        }
-        .carousel-item {
-            flex: 0 0 33.3333%; /* Display three items at once */
-            max-width: 33.3333%;
-        }
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            font-size: 2rem;
-            color: #0b3d91;
-            cursor: pointer;
-            z-index: 2;
-        }
-        .carousel-arrow.left {
-            left: 0;
-        }
-        .carousel-arrow.right {
-            right: 0;
         }
     </style>
 </head>
@@ -204,97 +174,42 @@
     <div class="section-container">
         <h2 class="section-title"><a href="#studiji" class="section-link">Studiji</a></h2>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card mb-4">
-                    <div class="card-body p-0">
-                        <img src="img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
-                        <div class="card-title-overlay">Preddiplomski Studij</div>
-                    </div>
-                    <div class="card-description">
-                        <p>Studij je organiziran kroz šest trogodišnjih studijska programa (smjerova), a započinje zajedničkom prvom godinom.</p>
+                    <img src="img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Preddiplomski Studij</h5>
+                        <p class="card-text">Studij je organiziran kroz šest trogodišnjih studijska programa (smjerova), a započinje zajedničkom prvom godinom.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card mb-4">
-                    <div class="card-body p-0">
-                        <img src="img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
-                        <div class="card-title-overlay">Diplomski Studij</div>
+                    <img src="img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Diplomski Studij</h5>
+                        <p class="card-text">Diplomski studij organizira se kroz tri studijska programa, traje dvije godine, a izvode se po sustavu preduvjeta.</p>
                     </div>
-                    <div class="card-description">
-                        <p>Diplomski studij organizira se kroz tri studijska programa, traje dvije godine, a izvode se po sustavu preduvjeta.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/tvz_studij3.jpg" class="card-img-top" alt="Studij 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Studij 3</h5>
+                        <p class="card-text">Opis studija 3. Ovdje možete navesti detalje ili opis studijskog programa.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Carousel Section -->
-    <div class="section-container">
-        <h2 class="section-title"><a href="#carousel" class="section-link">Carousel Section</a></h2>
-        <div class="carousel-container">
-            <div class="carousel-arrow left" id="carouselLeft">&lt;</div>
-            <div class="carousel-inner" id="carouselInner">
-                <div class="carousel-item">
-                    <img src="img/c1.jpg" alt="Image 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/c2.jpg" alt="Image 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/c3.jpg" alt="Image 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/c4.jpg" alt="Image 4">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/c5.jpg" alt="Image 5">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/c6.jpg" alt="Image 6">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/c7.jpg" alt="Image 7">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/c8.jpg" alt="Image 8">
-                </div>
-            </div>
-            <div class="carousel-arrow right" id="carouselRight">&gt;</div>
-        </div>
-    </div>
 </div>
 
 <!-- Bootstrap JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        let currentIndex = 0;
-        const items = $('.carousel-item');
-        const itemsToShow = 3;
-
-        $('#carouselRight').click(function() {
-            if (currentIndex < items.length - itemsToShow) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
-
-        $('#carouselLeft').click(function() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        });
-
-        function updateCarousel() {
-            const translateValue = -currentIndex * (100 / itemsToShow);
-            $('#carouselInner').css('transform', 'translateX(' + translateValue + '%)');
-        }
-    });
-</script>
 
 </body>
 </html>
