@@ -12,12 +12,21 @@
             overflow-x: hidden; /* Prevent horizontal overflow */
         }
         .navbar {
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .navbar-brand img {
-            height: 40px;
-        }
+			background-color: white;
+		}
+
+		.navbar-brand,
+		.nav-link {
+			color: #0b3d91 !important;
+		}
+
+		.nav-link:hover {
+			color: #a3c0f4 !important;
+		}
+
+		.navbar-brand img {
+			height: 50px;
+		}
         .content {
             padding: 20px;
         }
@@ -40,22 +49,44 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#"><img src="img/tvz_logo.png" alt="TVZ Logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="studiji.html">Studiji</a></li>
-                <li class="nav-item"><a class="nav-link" href="studenti.html">Studenti</a></li>
-                <li class="nav-item"><a class="nav-link" href="atvz.html">@TVZ</a></li>
-                <li class="nav-item"><a class="nav-link" href="novosti.html">Novosti</a></li>
-                <li class="nav-item"><a class="nav-link" href="onama.html">O nama</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navigation Bar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#"><img src="img/tvz_logo.png" alt="TVZ Logo"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="studiji.html">Studiji</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="studenti.html">Studenti</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="tvzDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@TVZ</a>
+						<div class="dropdown-menu" aria-labelledby="tvzDropdown">
+								<a class="dropdown-item" href="studentski_zivot.html">Studentski život</a>
+						</div>
+				</li>
+					<li class="nav-item">
+						<a class="nav-link" href="novosti.html">Novosti</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="onama.html">O nama</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html"><i class="flag flag-croatia"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index_en.html"><i class="flag flag-united-kingdom"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
     <div class="content">
         <div class="studies-section">
             <h2>Preddiplomski studij</h2>
