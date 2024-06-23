@@ -92,6 +92,31 @@
         .card-description {
             padding: 10px;
         }
+        .carousel-container {
+            position: relative;
+        }
+        .carousel-inner {
+            display: flex;
+            overflow: hidden;
+        }
+        .carousel-item {
+            flex: 0 0 33.3333%; /* Each item takes up one-third of the container */
+            max-width: 33.3333%;
+        }
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #0b3d91;
+            cursor: pointer;
+        }
+        .carousel-arrow.left {
+            left: 0;
+        }
+        .carousel-arrow.right {
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -200,12 +225,58 @@
             </div>
         </div>
 
-        
+        <!-- Carousel Section -->
+        <div class="section-container">
+            <h2 class="section-title"><a href="#carousel" class="section-link">Carousel Section</a></h2>
+            <div class="carousel-container">
+                <div class="carousel-arrow left" id="carouselLeft">&lt;</div>
+                <div class="carousel-inner" id="carouselInner">
+                    <div class="carousel-item">
+                        <img src="img/image1.jpg" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/image2.jpg" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/image3.jpg" alt="Image 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/image4.jpg" alt="Image 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/image5.jpg" alt="Image 5">
+                    </div>
+                </div>
+                <div class="carousel-arrow right" id="carouselRight">&gt;</div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let currentIndex = 0;
+            const items = $('#carouselInner .carousel-item');
+            const itemCount = items.length;
+            const itemsToShow = 3;
+
+            $('#carouselRight').click(function(){
+                if (currentIndex < itemCount - itemsToShow) {
+                    currentIndex++;
+                    $('#carouselInner').css('transform', 'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)');
+                }
+            });
+
+            $('#carouselLeft').click(function(){
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    $('#carouselInner').css('transform', 'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
