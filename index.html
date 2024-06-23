@@ -79,14 +79,23 @@
             font-size: 1.5rem; /* Increased font size */
             font-weight: bold; /* Bold font weight */
             color: white; /* White text color */
-            background-color: rgba(11, 61, 145, 0.7); /* Semi-transparent background */
-            padding: 10px 20px; /* Padding for better readability */
             border-radius: 5px;
             z-index: 1; /* Ensure text is on top of image */
         }
         .card-description {
             background-color: rgba(255, 255, 255, 0.9); /* Light background for description */
             padding: 15px;
+        }
+        .card-category {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: #0b3d91; /* TVZ Dark Blue */
+            color: white;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin: 0; /* Removed padding */
         }
     </style>
 </head>
@@ -177,8 +186,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <img src="img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
-                    <div class="card-title-overlay">Preddiplomski Studij</div>
+                    <img src="img/tvz_preddiplomski.jpg" alt="Preddiplomski Studij Image">
+                    <div class="card-title-overlay">Preddiplomski</div>
                     <div class="card-description">
                         <p>Studij je organiziran kroz šest trogodišnjih studijska programa (smjerova), a započinje zajedničkom prvom godinom.</p>
                     </div>
@@ -186,8 +195,8 @@
             </div>
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <img src="img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
-                    <div class="card-title-overlay">Diplomski Studij</div>
+                    <img src="img/tvz_diplomski.png" alt="Diplomski Studij Image">
+                    <div class="card-title-overlay">Diplomski</div>
                     <div class="card-description">
                         <p>Diplomski studij organizira se kroz tri studijska programa, traje dvije godine, a izvode se po sustavu preduvjeta.</p>
                     </div>
