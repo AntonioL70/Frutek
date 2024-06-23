@@ -64,6 +64,7 @@
             padding: 20px;
             margin-bottom: 20px;
             background-color: white;
+            border: 1px solid #ddd; /* Added border */
         }
         .card img {
             width: 100%;
@@ -89,6 +90,35 @@
         }
         .card-description {
             padding: 10px;
+        }
+        .galerija-container {
+            position: relative;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: 20px;
+        }
+        .galerija-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar */
+        }
+        .galerija-container > .row {
+            display: inline-flex;
+            flex-wrap: nowrap;
+        }
+        .galerija-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            cursor: pointer;
+        }
+        .galerija-arrow-left {
+            left: 10px;
+        }
+        .galerija-arrow-right {
+            right: 10px;
         }
     </style>
 </head>
@@ -174,7 +204,7 @@
     <div class="section-container">
         <h2 class="section-title"><a href="#studiji" class="section-link">Studiji</a></h2>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card mb-4">
                     <img src="img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
                     <div class="card-body">
@@ -183,7 +213,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card mb-4">
                     <img src="img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
                     <div class="card-body">
@@ -198,34 +228,26 @@
     <!-- Galerija Section -->
     <div class="section-container">
         <h2 class="section-title"><a href="#galerija" class="section-link">Galerija</a></h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="img/c1.jpg" class="card-img-top" alt="Gallery Image 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Image Title 1</h5>
-                        <p class="card-text">Description of the image. This is just a placeholder text.</p>
+        <div class="galerija-container">
+            <div class="galerija-arrow galerija-arrow-left"></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="img/c1.jpg" class="card-img-top" alt="Gallery Image 1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="img/c2.jpg" class="card-img-top" alt="Gallery Image 2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="img/c3.jpg" class="card-img-top" alt="Gallery Image 3">
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="img/c2.jpg" class="card-img-top" alt="Gallery Image 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Image Title 2</h5>
-                        <p class="card-text">Description of the image. This is just a placeholder text.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="img/c3.jpg" class="card-img-top" alt="Gallery Image 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Image Title 3</h5>
-                        <p class="card-text">Description of the image. This is just a placeholder text.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="galerija-arrow galerija-arrow-right"></div>
         </div>
     </div>
 
