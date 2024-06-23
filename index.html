@@ -24,17 +24,14 @@
             height: 50px;
         }
         .jumbotron {
-            width: 100vw; /* Full viewport width */
-            margin-left: calc(50% - 50vw); /* Center align on smaller screens */
-            margin-right: calc(50% - 50vw); /* Center align on smaller screens */
             background-image: url('img/tvz_homepage_carosel.png');
             background-size: cover;
             background-position: center;
-            padding-top: 200px; /* Adjust as needed */
-            padding-bottom: 200px; /* Adjust as needed */
+            padding: 200px 0; /* Adjust padding as needed */
             text-align: center;
             color: white;
             position: relative; /* Needed for absolute positioning */
+            margin-bottom: 0; /* Remove margin bottom */
         }
         .jumbotron h1 {
             font-size: 6rem; /* Increased font size */
@@ -42,7 +39,9 @@
             position: absolute; /* Position text absolutely */
             top: 50%; /* Center vertically */
             left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Center align with respect */
+            transform: translate(-50%, -50%); /* Center align with respect to its container */
+            margin: 0; /* Remove default margin */
+            z-index: 1; /* Ensure text is on top of image */
         }
         .section-title {
             font-size: 2rem; /* Adjust font size as needed */
