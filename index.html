@@ -94,22 +94,25 @@
         }
         .carousel-container {
             position: relative;
+            width: 100%;
+            overflow: hidden; /* Ensure items overflow properly */
         }
         .carousel-inner {
             display: flex;
-            overflow: hidden;
+            transition: transform 0.5s ease;
+            overflow: hidden; /* Hide overflow */
         }
         .carousel-item {
-            flex: 0 0 33.3333%; /* Each item takes up one-third of the container */
+            flex: 0 0 33.3333%; /* Display three items at once */
             max-width: 33.3333%;
         }
         .carousel-arrow {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
             font-size: 2rem;
             color: #0b3d91;
             cursor: pointer;
+            z-index: 2;
         }
         .carousel-arrow.left {
             left: 0;
@@ -120,172 +123,178 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/tvz_logo.png" alt="TVZ.hr Logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="studiji.html">Studiji</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="studenti.html">Studenti</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="atvz.html">@TVZ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="novosti.html">Novosti</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="onama.html">O nama</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Image with Text -->
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">TVZ</h1>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/tvz_logo.png" alt="TVZ.hr Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="studiji.html">Studiji</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="studenti.html">Studenti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="atvz.html">@TVZ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="novosti.html">Novosti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="onama.html">O nama</a>
+                </li>
+            </ul>
         </div>
     </div>
+</nav>
 
-    <!-- Main Content -->
-    <div class="container mt-5">
+<!-- Hero Image with Text -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">TVZ</h1>
+    </div>
+</div>
 
-        <!-- Novosti Section -->
-        <div class="section-container">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h2 class="section-title mb-0"><a href="#novosti" class="section-link">Novosti</a></h2>
-                <a href="novosti.html" class="section-link">Više novosti</a>
+<!-- Main Content -->
+<div class="container mt-5">
+
+    <!-- Novosti Section -->
+    <div class="section-container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="section-title mb-0"><a href="#novosti" class="section-link">Novosti</a></h2>
+            <a href="novosti.html" class="section-link">Više novosti</a>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="./img/tvz_novosti.jpg" class="card-img-top" alt="News Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">News Title 1</h5>
+                        <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="./img/tvz_novosti.jpg" class="card-img-top" alt="News Image 1">
-                        <div class="card-body">
-                            <h5 class="card-title">News Title 1</h5>
-                            <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
-                        </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="./img/tvz_novosti2.jpg" class="card-img-top" alt="News Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">News Title 2</h5>
+                        <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="./img/tvz_novosti2.jpg" class="card-img-top" alt="News Image 2">
-                        <div class="card-body">
-                            <h5 class="card-title">News Title 2</h5>
-                            <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="./img/tvz_novosti3.png" class="card-img-top" alt="News Image 3">
-                        <div class="card-body">
-                            <h5 class="card-title">News Title 3</h5>
-                            <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="./img/tvz_novosti3.png" class="card-img-top" alt="News Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">News Title 3</h5>
+                        <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Studiji Section -->
-        <div class="section-container">
-            <h2 class="section-title"><a href="#studiji" class="section-link">Studiji</a></h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body p-0">
-                            <img src="img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
-                            <div class="card-title-overlay">Preddiplomski Studij</div>
-                        </div>
-                        <div class="card-description">
-                            <p>Studij je organiziran kroz šest trogodišnjih studijska programa (smjerova), a započinje zajedničkom prvom godinom.</p>
-                        </div>
+    </div>
+    
+    <!-- Studiji Section -->
+    <div class="section-container">
+        <h2 class="section-title"><a href="#studiji" class="section-link">Studiji</a></h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body p-0">
+                        <img src="img/tvz_preddiplomski.jpg" class="card-img-top" alt="Preddiplomski Studij Image">
+                        <div class="card-title-overlay">Preddiplomski Studij</div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body p-0">
-                            <img src="img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
-                            <div class="card-title-overlay">Diplomski Studij</div>
-                        </div>
-                        <div class="card-description">
-                            <p>Diplomski studij organizira se kroz tri studijska programa, traje dvije godine, a izvode se po sustavu preduvjeta.</p>
-                        </div>
+                    <div class="card-description">
+                        <p>Studij je organiziran kroz šest trogodišnjih studijska programa (smjerova), a započinje zajedničkom prvom godinom.</p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Carousel Section -->
-        <div class="section-container">
-            <h2 class="section-title"><a href="#carousel" class="section-link">Carousel Section</a></h2>
-            <div class="carousel-container">
-                <div class="carousel-arrow left" id="carouselLeft">&lt;</div>
-                <div class="carousel-inner" id="carouselInner">
-                    <div class="carousel-item">
-                        <img src="img/c1.jpg" alt="Image 1">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body p-0">
+                        <img src="img/tvz_diplomski.png" class="card-img-top" alt="Diplomski Studij Image">
+                        <div class="card-title-overlay">Diplomski Studij</div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/c2.jpg" alt="Image 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/c3.jpg" alt="Image 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/c4.jpg" alt="Image 4">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/c5.jpg" alt="Image 5">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/c6.jpg" alt="Image 6">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/c7.jpg" alt="Image 7">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/c8.jpg" alt="Image 8">
+                    <div class="card-description">
+                        <p>Diplomski studij organizira se kroz tri studijska programa, traje dvije godine, a izvode se po sustavu preduvjeta.</p>
                     </div>
                 </div>
-                <div class="carousel-arrow right" id="carouselRight">&gt;</div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            let currentIndex = 0;
-            const items = $('#carouselInner .carousel-item');
-            const itemCount = items.length;
-            const itemsToShow = 3;
+    <!-- Carousel Section -->
+    <div class="section-container">
+        <h2 class="section-title"><a href="#carousel" class="section-link">Carousel Section</a></h2>
+        <div class="carousel-container">
+            <div class="carousel-arrow left" id="carouselLeft">&lt;</div>
+            <div class="carousel-inner" id="carouselInner">
+                <div class="carousel-item">
+                    <img src="img/c1.jpg" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/c2.jpg" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/c3.jpg" alt="Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/c4.jpg" alt="Image 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/c5.jpg" alt="Image 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/c6.jpg" alt="Image 6">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/c7.jpg" alt="Image 7">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/c8.jpg" alt="Image 8">
+                </div>
+            </div>
+            <div class="carousel-arrow right" id="carouselRight">&gt;</div>
+        </div>
+    </div>
+</div>
 
-            $('#carouselRight').click(function(){
-                if (currentIndex < itemCount - itemsToShow) {
-                    currentIndex++;
-                    $('#carouselInner').css('transform', 'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)');
-                }
-            });
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        let currentIndex = 0;
+        const items = $('.carousel-item');
+        const itemsToShow = 3;
 
-            $('#carouselLeft').click(function(){
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    $('#carouselInner').css('transform', 'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)');
-                }
-            });
+        $('#carouselRight').click(function() {
+            if (currentIndex < items.length - itemsToShow) {
+                currentIndex++;
+                updateCarousel();
+            }
         });
-    </script>
+
+        $('#carouselLeft').click(function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        function updateCarousel() {
+            const translateValue = -currentIndex * (100 / itemsToShow);
+            $('#carouselInner').css('transform', 'translateX(' + translateValue + '%)');
+        }
+    });
+</script>
+
 </body>
 </html>
