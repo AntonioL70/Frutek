@@ -30,12 +30,8 @@
 			height: 50px;
 		}
 
-		nav i {
-			width: 150%;
-		}
-
 		.jumbotron {
-			background-image: url('./img/tvz_onama.jpg');
+			background-image: url('img/tvz_homepage_carosel.png');
 			background-size: cover;
 			background-position: center;
 			padding: 200px 0;
@@ -56,8 +52,21 @@
 			z-index: 1;
 		}
 
-		.mt-5 {
-			margin-top: 3rem !important;
+		.section-title {
+			font-size: 2rem;
+			font-weight: bold;
+			color: #0b3d91;
+			margin-bottom: 1rem;
+		}
+
+		.section-link {
+			color: #0b3d91;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		.section-link:hover {
+			color: #a3c0f4;
 		}
 
 		.section-container {
@@ -65,6 +74,70 @@
 			margin-bottom: 20px;
 			background-color: white;
 			border: 1px solid #ddd;
+		}
+
+		.card-img-top {
+			height: 200px;
+			object-fit: cover;
+		}
+
+		.card-img-top-s {
+			height: 400px;
+			object-fit: cover;
+		}
+
+		.card {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.card-title-overlay {
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 3rem;
+			font-weight: bold;
+			color: white;
+			border-radius: 5px;
+			z-index: 1;
+		}
+
+		.card-description {
+			background-color: rgba(255, 255, 255, 0.9);
+			padding: 15px;
+		}
+
+		.card-category {
+			position: absolute;
+			top: 200px;
+			right: 0px;
+			background-color: #0b3d91;
+			color: white;
+			padding: 5px 10px;
+			font-weight: bold;
+			font-size: 0.8rem;
+			margin: 0;
+		}
+
+		.sticky-container {
+			position: sticky;
+			top: 20px;
+			height: 200px;
+			width: 50px;
+			background-color: #f8f9fa;
+			border: 1px solid #ccc;
+			padding: 10px;
+		}
+
+		.carousel-container {
+			margin-top: 20px;
+			margin-bottom: 5%;
+		}
+
+		.carousel-item img {
+			width: 100%;
+			height: auto;
 		}
 
 		.footer {
@@ -194,14 +267,19 @@
 		</div>
 
 		<div class="section-container">
-			<p></p>
+			<h2 class="section-title mb-0"><a href="#" class="section-link">Contact info</a></h2>
+			<p>
+				<b>Erasmus cordinator</b> <br>
+				Vida Senci<br>
+				
+			</p>
 		</div>
 
 
 		<div class="section-container">
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.7972891297154!2d15.966938676666752!3d45.795288711286524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d68b441ce2df%3A0x54e2a03adf42446f!2sZagreb%20University%20of%20Applied%20Sciences!5e0!3m2!1sen!2shr!4v1719165804112!5m2!1sen!2shr"
-				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+				width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
 				referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 	</div>
