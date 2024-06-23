@@ -204,10 +204,78 @@
 			background-color: white;
 			margin: 0;
 		}
+
+		.nav-item.dropdown:hover .dropdown-menu {
+			display: block;
+		}
+
+		.dropdown-item {
+			color: #0b3d91;
+		}
+
+		.dropdown-item:hover {
+			color: #a3c0f4;
+		}
+
+		.social-sidebar {
+			position: fixed;
+			top: 50%;
+			left: 0;
+			transform: translateY(-30%);
+			padding: 0;
+			margin: 0;
+			z-index: 1000;
+		}
+
+		.social-sidebar li {
+			margin: 0;
+			padding: 0;
+			height: 32px;
+		}
+
+		.social-sidebar ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+			align-items: center;
+		}
+
+		.social-sidebar a {
+			text-align: center;
+			align-items: center;
+			margin: 0;
+			padding: 2%;
+			display: inline-block;
+			height: 32px;
+			background-color: #0b3d91;
+		}
+
+		.social-sidebar a i {
+			color: white;
+			background-color: #0b3d91;
+		}
+
+		.social-sidebar a i:hover {
+			color: dimgray;
+		}
 	</style>
 </head>
 
 <body>
+	<!-- Bočna traka društvenih mreža -->
+	<div class="social-sidebar">
+		<ul class="list-unstyled">
+			<li><a href="https://www.facebook.com/tvz.hr" title="Facebook" class="social-link"><i
+						class="fab fa-facebook-square fa-2x"></i></a></li>
+			<li><a href="https://www.linkedin.com/school/tvzhr/" title="LinkedIn" class="social-link"><i
+						class="fab fa-linkedin fa-2x"></i></a></li>
+			<li><a href="https://www.instagram.com/tvzhr/" title="Instagram" class="social-link"><i
+						class="fab fa-instagram-square fa-2x"></i></a></li>
+			<li><a href="https://twitter.com/tvzhr" title="Twitter" class="social-link"><i
+						class="fab fa-twitter-square fa-2x"></i></a></li>
+		</ul>
+	</div>
 
 	<!-- Navigation Bar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -225,8 +293,15 @@
 					<li class="nav-item">
 						<a class="nav-link" href="studenti.html">Students</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="atvz.html">@TVZ</a>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="tvzDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">@TVZ</a>
+						<div class="dropdown-menu" aria-labelledby="tvzDropdown">
+							<a class="dropdown-item" href="studentski_zivot.html">Studentski život</a>
+							<a class="dropdown-item" href="studentski_zivot.html">Sport</a>
+							<a class="dropdown-item" href="studentski_zivot.html">Knjižnica</a>
+							<a class="dropdown-item" href="studentski_zivot.html">Mogućnosti</a>
+						</div>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="novosti.html">News</a>
