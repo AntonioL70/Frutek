@@ -73,24 +73,18 @@
         }
         .card-title {
             font-weight: bold;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
-            z-index: 1;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            color: black; /* Changed text color to black */
+            margin-bottom: 10px; /* Added margin to separate from description */
         }
-        .card-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            height: 100%;
-            width: 100%;
+        .card-category {
             position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
+            top: 10px;
+            right: 10px;
+            background-color: #0b3d91; /* TVZ Dark Blue */
+            color: white;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -148,6 +142,7 @@
                     <div class="card-body">
                         <h5 class="card-title">News Title 1</h5>
                         <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
+                        <span class="card-category">Kategorija 1</span>
                     </div>
                 </div>
             </div>
@@ -157,6 +152,7 @@
                     <div class="card-body">
                         <h5 class="card-title">News Title 2</h5>
                         <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
+                        <span class="card-category">Kategorija 2</span>
                     </div>
                 </div>
             </div>
@@ -166,6 +162,7 @@
                     <div class="card-body">
                         <h5 class="card-title">News Title 3</h5>
                         <p class="card-text">Brief description of the news content. This is just a placeholder text.</p>
+                        <span class="card-category">Kategorija 3</span>
                     </div>
                 </div>
             </div>
