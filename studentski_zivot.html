@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVZ Novosti</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: white;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #0b3d91 !important;
+        }
+
+        .nav-link:hover {
+            color: #a3c0f4 !important;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .sticky-container {
+            position: sticky;
+            top: 20px;
+            height: 200px;
+            width: 50px;
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .footer {
+            background-color: #323437;
+            color: white;
+            margin: 3% 0 0 0;
+        }
+
+        .footer .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer ul li a:hover {
+            color: gray;
+        }
+
+        .footer ul {
+            padding: 0;
+        }
+
+        .footer .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .footer .row {
+            justify-content: center;
+        }
+
+        .footer .col-md-4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 2% 0 2% 0;
+        }
+
+        .footer .col-md-4:first-child img {
+            width: 70%;
+            margin: auto 0;
+        }
+
+        .footer hr {
+            background-color: white;
+            margin: 0;
+        }
+
+        .social-sidebar {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-30%);
+            padding: 0;
+            margin: 0;
+            z-index: 1000;
+        }
+
+        .social-sidebar li {
+            margin: 0;
+            padding: 0;
+            height: 32px;
+        }
+
+        .social-sidebar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            align-items: center;
+        }
+
+        .social-sidebar a {
+            text-align: center;
+            align-items: center;
+            margin: 0;
+            padding: 2%;
+            display: inline-block;
+            height: 32px;
+            background-color: #0b3d91;
+        }
+
+        .social-sidebar a i {
+            color: white;
+            background-color: #0b3d91;
+        }
+
+        .social-sidebar a i:hover {
+            color: dimgray;
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-item {
+            color: #0b3d91;
+        }
+
+        .dropdown-item:hover {
+            color: #a3c0f4;
+        }
+        .card {
+            height: 100%;
+            border: none;
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            height: 200px; /* Adjust height as needed */
+            object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire space */
+        }
+
+        .card-body {
+            position: relative; /* Ensure category spans are positioned relative to card body */
+        }
+
+        .card-category {
+            position: absolute;
+            top: 0px; /* Adjust position as needed */
+            right: 0px; /* Adjust position as needed */
+            background-color: #0b3d91;
+            color: white;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bočna traka društvenih mreža -->
+    <div class="social-sidebar">
+        <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/tvz.hr" title="Facebook" class="social-link"><i
+                            class="fab fa-facebook-square fa-2x"></i></a></li>
+            <li><a href="https://www.linkedin.com/school/tvzhr/" title="LinkedIn" class="social-link"><i
+                            class="fab fa-linkedin fa-2x"></i></a></li>
+            <li><a href="https://www.instagram.com/tvzhr/" title="Instagram" class="social-link"><i
+                            class="fab fa-instagram-square fa-2x"></i></a></li>
+            <li><a href="https://twitter.com/tvzhr" title="Twitter" class="social-link"><i
+                            class="fab fa-twitter-square fa-2x"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/tvz_logo.png" alt="TVZ Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="studiji.html">Studiji</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="studenti.html">Studenti</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tvzDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@TVZ</a>
+                        <div class="dropdown-menu" aria-labelledby="tvzDropdown">
+                            <a class="dropdown-item" href="studentski_zivot.html">Studentski život</a>
+                            <a class="dropdown-item" href="studentski_zivot.html">Sport</a>
+                            <a class="dropdown-item" href="studentski_zivot.html">Knjižnica</a>
+                            <a class="dropdown-item" href="studentski_zivot.html">Mogućnosti</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="novosti.html">Novosti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="onama.html">O nama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="flag flag-croatia"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index_en.html"><i class="flag flag-united-kingdom"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Novosti Section -->
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Studentski život</h1>
+    
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/tvz_logo_white.png" alt="TVZ Logo White">
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Kontaktirajte nas</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Vrbik 8, 10000 Zagreb, Hrvatska</li>
+                        <li><i class="fas fa-phone-alt"></i> +385 1 6196 000</li>
+                        <li><i class="far fa-envelope"></i> info@tvz.hr</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Pratite nas</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/tvz.hr" target="_blank"
+                                title="Facebook"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/school/tvzhr/" target="_blank"
+                                title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/tvzhr/" target="_blank"
+                                title="Instagram"><i class="fab fa-instagram-square fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/tvzhr" target="_blank"
+                                title="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">&copy; 2024 TVZ. Sva prava pridržana.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
