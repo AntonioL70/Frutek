@@ -68,7 +68,7 @@
             object-fit: cover; /* Maintain aspect ratio and cover whole space */
         }
         .card-img-top-s {
-            height: 300px; /* Fixed height for images */
+            height: 400px; /* Fixed height for images */
             object-fit: cover; /* Maintain aspect ratio and cover whole space */
         }
         .card {
@@ -77,7 +77,7 @@
         }
         .card-title-overlay {
             position: absolute;
-            top: 35%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 3rem; /* Increased font size */
@@ -100,6 +100,25 @@
             font-weight: bold;
             font-size: 0.8rem;
             margin: 0; /* Removed padding */
+        }
+        .sticky-container {
+            position: sticky;
+            top: 20px; /* Adjust top position as needed */
+            height: 200px;
+            width: 50px;
+            background-color: #f8f9fa; /* Light gray background */
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .small-container {
+            height: calc(100% / 5); /* Divide height equally */
+            margin-bottom: 10px;
+            overflow: hidden; /* Ensure content doesn't overflow */
+        }
+        .small-container img {
+            width: 100%; /* Ensure image takes full width of container */
+            height: auto; /* Maintain aspect ratio */
+        }
         }
     </style>
 </head>
@@ -144,6 +163,25 @@
 <!-- Main Content -->
 <div class="container mt-5">
 
+    <div class="col-md-2 d-none d-md-block"> <!-- Koristimo col-md-2 kako bismo zauzeli 2 kolone u gridu Bootstrapa -->
+        <div class="sticky-container">
+            <div class="small-container">
+                <img src="img/c1.jpg" alt="Image 1">
+            </div>
+            <div class="small-container">
+                <img src="img/c2.jpg" alt="Image 2">
+            </div>
+            <div class="small-container">
+                <img src="img/c3.jpg" alt="Image 3">
+            </div>
+            <div class="small-container">
+                <img src="img/c4.jpg" alt="Image 4">
+            </div>
+            <div class="small-container">
+                <img src="img/c5.jpg" alt="Image 5">
+            </div>
+        </div>
+    </div>
     <!-- Novosti Section -->
     <div class="section-container">
         <div class="d-flex justify-content-between align-items-center mb-3">
